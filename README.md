@@ -1,7 +1,8 @@
 # MVP Library Fullstack application
 ## Stack:
 ### Backend
-- H2 Database
+- Postgresql
+- Docker
 - Flyway
 - Java 11
 - JPA
@@ -17,7 +18,7 @@
 - [ ] Book Entity
 - [ ] JPA Book Repository
 - [ ] Book Service (CRUD)
-- [ ] Book Controler
+- [ ] Book Controller
 
 ### Frontend:
 - [ ] Main Page with all books slider
