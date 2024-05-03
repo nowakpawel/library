@@ -31,6 +31,8 @@
 - [ ] Main Page with all books slider
 - [ ] Details page with all book details, description and Button for lend
 - [ ] [Frontend/Backend] When 'Lend a book' button is clicked Status is changed.
+- [ ] [Frontent/Backend] Book image
+- [ ] Pagination
 
 ### Future Features:
 - [ ] Login using oauth
