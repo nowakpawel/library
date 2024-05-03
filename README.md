@@ -4,7 +4,7 @@
 - Postgresql
 - Docker
 - Flyway
-- Java 11
+- Java 17
 - JPA
 - Hibernate
 - JUnit
@@ -15,10 +15,17 @@
 
 ## To Do:
 ### Backend:
-- [ ] Book Entity
-- [ ] JPA Book Repository
-- [ ] Book Service (CRUD)
-- [ ] Book Controller
+- [x] Book Entity
+- [x] JPA Book Repository
+- [x] Book Service (CRUD)
+- [x] Book Controller
+- [x] BookServiceTest
+- [x] BookControllerTest
+- [ ] [JPARepository] Instead of updating entire book - update only it's status.
+- [ ] [BookService] Throw exception instead of returning null.
+- [ ] [Book Entity] Add Book status and Book summary
+- [ ] ModelMapper - Entity/DTO
+- [ ] Add swagger
 
 ### Frontend:
 - [ ] Main Page with all books slider
