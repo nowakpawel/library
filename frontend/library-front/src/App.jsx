@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getAllBooks } from './api/BookService'
 import './App.css'
 
@@ -6,18 +6,23 @@ import './App.css'
 function App() {
   const [data, setData] = useState({})
 
-  const getBooks = async () => {
+  const getData = async () => {
     try {
-        const {data} = await getAllBooks();
-        setData(data);
-        console.log(data);
+      const data = await getAllBooks();
+      setData(data.data)
+      console.log(data.data);
     } catch(error) {
       console.log(error);
     }
   }
 
+  const hasLoadedBefore = useRef(true);
+
   useEffect(() => {
-    getBooks();
+    if(hasLoadedBefore.current) {
+      getData();
+      hasLoadedBefore.current = false;
+    }
   }, []);
 
   return (

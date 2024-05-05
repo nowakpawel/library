@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/library")
 @AllArgsConstructor
+@Slf4j
 public class LibraryController {
     private final BookService bookService;
 
@@ -32,6 +34,7 @@ public class LibraryController {
     })
     public ResponseEntity<List<Book>> findAllBooks() {
         List<Book> books = bookService.findAll();
+        log.info("findAllBooks: gettig all books...");
 
         return ResponseEntity.ok(books);
     }
